@@ -1,0 +1,56 @@
+body{
+    font-family:'Lucida Sans';
+    background:whitesmoke;
+}
+
+
+.left {
+    float: left;
+    shape-outside: polygon(0 0, 0 600px, 200px 600px);
+    clip-path: polygon(0 0, 0 600px, 200px 600px);
+    background: linear-gradient(to top right, #67D7F5, #86F7CC);
+    height: 600px;
+    width: 600px;
+  }
+  
+  .right {
+    float: right;
+    shape-outside: polygon(200px 300px, 900px 900px, 600px 0, 0 0);
+    clip-path: polygon(200px 300px, 900px 900px, 600px 0, 0 0);
+    background: linear-gradient(to bottom left, #67D7F5, #86F7CC);
+    height: 600px;
+    width: 300px;
+  }
+
+
+.main_{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+.main_ select{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.main_ button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: #67D7F5; 
+    color: white;
+    border: 0.5px solid gray
+}
+
+

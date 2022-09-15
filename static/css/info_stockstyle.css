@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 10px;
+}
+
+body{
+    font-family:'Lucida Sans';
+    background:whitesmoke;
+}
+
+
+
+
+.left {
+    float: left;
+    shape-outside: polygon(0 0, 0 600px, 200px 600px);
+    clip-path: polygon(0 0, 0 600px, 200px 600px);
+    background: linear-gradient(to top right, #67D7F5, #86F7CC);
+    height: 600px;
+    width: 600px;
+  }
+  
+.right {
+    float: right;
+    shape-outside: polygon(200px 300px, 900px 900px, 600px 0, 0 0);
+    clip-path: polygon(200px 300px, 900px 900px, 600px 0, 0 0);
+    background: linear-gradient(to bottom left, #67D7F5, #86F7CC);
+    height: 600px;
+    width: 300px;
+  }
+
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-gap:10px;
+    padding-top: 20px;
+}
+
+.textos_1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.textos_1_1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.textos_2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;;
+}
+
+.textos_3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.difference{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

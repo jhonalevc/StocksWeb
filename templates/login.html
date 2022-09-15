@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks  -  Log in </title>
+    <link rel ="stylesheet" href= "{{url_for('static', filename ='/css/loginstyle.css')}}">
+</head>
+<body>
+    <header>
+        <a href ="/">Log in</a>
+        <a href ="#">Help</a>
+    </header>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="login_box">
+        <h1>Welcome!</h1>
+        <h3>Log in to continue!</h3>
+        <form method="POST" action ="{{ url_for('show_info') }}" >
+            <div class="email">
+                <input placeholder="Email" type="text" name= email data-validate="Valid email is required: ex@abc.xzy">
+            </div>
+            <div class="password">
+                <input type="password" placeholder="Password" name=password>
+            </div>
+            <button class="login_button">
+                Login
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>

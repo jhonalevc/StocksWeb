@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Stock</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='/css/info_stockstyle.css') }}">
+</head>
+<body>
+
+    <header>
+        <a href ="/">Log in</a>
+        <a href ="#">Help</a>
+    </header>
+    
+    <div class="left"></div>
+    <div class="right"></div>
+
+        <div class="content">
+            <div>
+                <h1>Summary</h1>
+                <br>
+            </div>
+            <div class="textos_1">
+                <h2> Total Money updated  -  </h2>
+                <h2> {{max_date}} : </h2>
+                <h2> {{most_recent_}} </h2>
+            </div>
+            <div class="textos_1_1">
+                <h2> Total Money previous  -  </h2>
+                <h2> {{last_day_value_}} </h2>
+            </div>
+            <div class="textos_2">
+                <h2> Money When  started -  </h2>
+                <h2> {{earliest_date}} : </h2>
+                <h2> {{earliest_}} </h2>
+            </div>
+            <div class="textos_3">
+                <h2> Amount: </h2>
+                <h2> {{qtyty}} </h2>
+                <h2> Stocks </h2>
+            </div>
+            <br>
+            <div class="symbol">
+                    {% if x_c > 0 %}
+                    <img src="{{ url_for('static', filename='profit.png') }}" alt="Profit" width="150" height="150" >
+                    {% else %}
+                    <img src="{{ url_for('static', filename='loss.png') }}" alt="Loss" width="150" height="150">
+                    {% endif %}
+            </div>
+            <div class="difference">
+                <h3>Difference</h3>
+                <h3>{{x_C2}}</h3>
+            </div>
+        </div>
+</body>
+</html>

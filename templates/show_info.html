@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{{url_for('static', filename ='/css/showstyle.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href ="/">Log in</a>
+        <a href ="#">Help</a>
+    </header>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="main_">
+        <h2> Select the Stock you Wish to reveiw</h2>
+    <div class="lista">
+        <form method ="POST" action="{{ url_for('info_stock') }}">
+            <select name=chosen_stock class="list__">
+                {% for stock in sr %}
+                <option value="{{stock}}" selected>
+                    {{stock}}
+                    {% endfor %}
+                </option>
+            </select>
+            <button>Continue</button>
+        </form>
+    </div>
+        <h3>Follow this link to our power bi report : </h3>
+        <a href="https://app.powerbi.com/groups/me/reports/74af3ed7-11cb-47bf-8dba-a3582d3bf912/ReportSectionc7096692dc10d9858d67"> Power Bi</a>
+    </div>
+</body>
+</html>
